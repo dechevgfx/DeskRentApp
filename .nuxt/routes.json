@@ -1,0 +1,50 @@
+[
+  {
+    "name": "bookings",
+    "path": "/bookings",
+    "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/bookings/index.vue",
+    "chunkName": "pages/bookings/index"
+  },
+  {
+    "name": "desks",
+    "path": "/desks",
+    "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/desks/index.vue",
+    "chunkName": "pages/desks/index"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/login/index.vue",
+    "chunkName": "pages/login/index"
+  },
+  {
+    "name": "profile",
+    "path": "/profile",
+    "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/profile/index.vue",
+    "chunkName": "pages/profile/index"
+  },
+  {
+    "name": "register",
+    "path": "/register",
+    "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/register/index.vue",
+    "chunkName": "pages/register/index"
+  },
+  {
+    "name": "rooms",
+    "path": "/rooms",
+    "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/rooms/index.vue",
+    "chunkName": "pages/rooms/index"
+  },
+  {
+    "name": "users",
+    "path": "/users",
+    "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/users/index.vue",
+    "chunkName": "pages/users/index"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]
