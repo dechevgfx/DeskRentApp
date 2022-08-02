@@ -1,6 +1,15 @@
 {
+  "AllDesks": {
+    "description": "Auto imported from components/AllDesks.vue"
+  },
   "AllRoomsDesign": {
     "description": "Auto imported from components/AllRoomsDesign.vue"
+  },
+  "DeskCard": {
+    "description": "Auto imported from components/DeskCard.vue"
+  },
+  "DeskDetails": {
+    "description": "Auto imported from components/DeskDetails.vue"
   },
   "Heading": {
     "description": "Auto imported from components/Heading.vue"

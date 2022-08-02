@@ -1,4 +1,7 @@
+export { default as AllDesks } from '../../components/AllDesks.vue'
 export { default as AllRoomsDesign } from '../../components/AllRoomsDesign.vue'
+export { default as DeskCard } from '../../components/DeskCard.vue'
+export { default as DeskDetails } from '../../components/DeskDetails.vue'
 export { default as Heading } from '../../components/Heading.vue'
 export { default as Home } from '../../components/Home.vue'
 export { default as RoomCard } from '../../components/RoomCard.vue'

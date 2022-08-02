@@ -13,6 +13,8 @@ const _18a89a9e = () => interopDefault(import('../pages/register/index.vue' /* w
 const _25ce3b73 = () => interopDefault(import('../pages/rooms/index.vue' /* webpackChunkName: "pages/rooms/index" */))
 const _df9ccafa = () => interopDefault(import('../pages/users/index.vue' /* webpackChunkName: "pages/users/index" */))
 const _f8c7554e = () => interopDefault(import('../pages/rooms/_roomId/index.vue' /* webpackChunkName: "pages/rooms/_roomId/index" */))
+const _552b6178 = () => interopDefault(import('../pages/rooms/_roomId/desks/index.vue' /* webpackChunkName: "pages/rooms/_roomId/desks/index" */))
+const _efc17bb6 = () => interopDefault(import('../pages/rooms/_roomId/desks/_deskId.vue' /* webpackChunkName: "pages/rooms/_roomId/desks/_deskId" */))
 const _5d5a39ca = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -62,6 +64,14 @@ export const routerOptions = {
     path: "/rooms/:roomId",
     component: _f8c7554e,
     name: "rooms-roomId"
+  }, {
+    path: "/rooms/:roomId/desks",
+    component: _552b6178,
+    name: "rooms-roomId-desks"
+  }, {
+    path: "/rooms/:roomId/desks/:deskId",
+    component: _efc17bb6,
+    name: "rooms-roomId-desks-deskId"
   }, {
     path: "/",
     component: _5d5a39ca,

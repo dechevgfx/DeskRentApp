@@ -63,6 +63,20 @@
     "_name": "_f8c7554e"
   },
   {
+    "name": "rooms-roomId-desks",
+    "path": "/rooms/:roomId/desks",
+    "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/rooms/_roomId/desks/index.vue",
+    "chunkName": "pages/rooms/_roomId/desks/index",
+    "_name": "_552b6178"
+  },
+  {
+    "name": "rooms-roomId-desks-deskId",
+    "path": "/rooms/:roomId/desks/:deskId",
+    "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/rooms/_roomId/desks/_deskId.vue",
+    "chunkName": "pages/rooms/_roomId/desks/_deskId",
+    "_name": "_efc17bb6"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/index.vue",

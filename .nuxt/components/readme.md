@@ -6,7 +6,10 @@ You can directly use them in pages and other components without the need to impo
 
 **Tip:** If a component is conditionally rendered with `v-if` and is big, it is better to use `Lazy` or `lazy-` prefix to lazy load.
 
+- `<AllDesks>` | `<all-desks>` (components/AllDesks.vue)
 - `<AllRoomsDesign>` | `<all-rooms-design>` (components/AllRoomsDesign.vue)
+- `<DeskCard>` | `<desk-card>` (components/DeskCard.vue)
+- `<DeskDetails>` | `<desk-details>` (components/DeskDetails.vue)
 - `<Heading>` | `<heading>` (components/Heading.vue)
 - `<Home>` | `<home>` (components/Home.vue)
 - `<RoomCard>` | `<room-card>` (components/RoomCard.vue)

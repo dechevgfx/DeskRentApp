@@ -42,9 +42,18 @@
                                 <span>Available: {{ freeSpaces }}</span>
                                 <br />
 
-                                <button class="btn">BOOK</button>
+                                <NuxtLink
+                                    v-if="freeSpaces > 0"
+                                    :to="`/rooms/${room._id}/desks`"
+                                    class="btn"
+                                >
+                                    BOOK</NuxtLink
+                                >
                                 <div v-if="freeSpaces == 0">
                                     <p>NO AVAILABLE SPACES</p>
+                                    <NuxtLink class="btn" v-if="user.role == 'admin'"
+                                        >GO TO DESKS PAGE</NuxtLink
+                                    >
                                 </div>
                             </div>
                         </div>
