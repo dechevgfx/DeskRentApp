@@ -54,7 +54,3 @@ export default {
     },
 };
 </script>
-
-<style scoped>
-@import url(../assets/style.css);
-</style>

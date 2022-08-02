@@ -62,7 +62,3 @@ export default {
     middleware: ["noAuthentication"],
 };
 </script>
-
-<style scoped>
-@import url(../../assets/style.css);
-</style>

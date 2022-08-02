@@ -17,6 +17,3 @@ export default {
     middleware: ["authentication", "isAdmin"],
 };
 </script>
-<style>
-@import url(../../assets/style.css);
-</style>
