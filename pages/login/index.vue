@@ -2,13 +2,13 @@
     <div class="login container">
         <div class="login-container">
             <h1 class="heading">Log In</h1>
-            <div class="error">
-                ERRORS SHOWS HERE
+            <div class="error" v-if="error">
+                {{ error }}
             </div>
 
             <form>
                 <span>Enter your email address</span>
-                <input type="text" name="email" id="email"/>
+                <input type="text" name="email" id="email" v-model="email" />
 
                 <span>Password</span>
                 <input
@@ -16,9 +16,10 @@
                     type="password"
                     name="password"
                     id="password"
+                    v-model="password"
                 />
 
-                <button class="btn">Login</button>
+                <button @click="handleLogin" class="btn">Login</button>
                 <br />
                 <button class="btn">
                     <nuxt-link :to="`/register`">Sign up now</nuxt-link>
@@ -31,6 +32,36 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            email: "",
+            password: "",
+        };
+    },
+    methods: {
+        handleLogin(e) {
+            e.preventDefault();
+            this.$store.commit("login", [email.value, password.value]);
+
+            if (this.$store.state.currentUser) {
+                this.$router.push("rooms");
+            }
+        },
+    },
+    computed: {
+        error() {
+            return this.$store.state.error;
+        },
+        currentUser() {
+            return this.$store.state.user;
+        },
+    },
+    middleware: ["noAuthentication"],
+};
+</script>
 
 <style scoped>
 @import url(../../assets/style.css);

@@ -3,27 +3,27 @@
   <header>
     <div class="nav container">
       <!-- Logo -->
-      <NuxtLink to="`/`" class="logo">DESK RENT</NuxtLink>
+      <NuxtLink class="logo" to="`/`">DESK RENT</NuxtLink>
       <!-- Nav List -->
       <ul class="navbar">
-        <li>
+        <li v-if="user">
           <NuxtLink :to="`/bookings`">Bookings</NuxtLink>
         </li>
-        <li><NuxtLink :to="`/rooms`">Rooms</NuxtLink></li>
-        <li>
+        <li v-if="user"><NuxtLink :to="`/rooms`">Rooms</NuxtLink></li>
+        <li v-if="user && user.role === 'admin'">
           <NuxtLink :to="`/desks`">Desks</NuxtLink>
         </li>
-        <li>
+        <li v-if="user && user.role === 'admin'">
           <NuxtLink :to="`/users`">Users</NuxtLink>
         </li>
       </ul>
       <!-- Log In Button -->
-      <div>
+      <div v-if="user">
         <button class="btn">
           <NuxtLink :to="`/profile`">PROFILE</NuxtLink>
         </button>
       </div>
-      <div>
+      <div v-if="!user">
         <button class="btn">
           <NuxtLink :to="`/login`">Log In</NuxtLink>
         </button>
@@ -37,6 +37,11 @@ export default {
     data() {
         return {};
     },
+    computed: {
+      user() {
+        return this.$store.state.currentUser;
+      }
+    }
 }
 </script>
 
