@@ -1,4 +1,8 @@
+export { default as AllRoomsDesign } from '../../components/AllRoomsDesign.vue'
 export { default as Heading } from '../../components/Heading.vue'
+export { default as Home } from '../../components/Home.vue'
+export { default as RoomCard } from '../../components/RoomCard.vue'
+export { default as RoomDetails } from '../../components/RoomDetails.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

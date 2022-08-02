@@ -65,6 +65,7 @@ export default {
                 email.value,
                 password.value,
             ]);
+            //Open rooms page because its a new customer!
             this.$router.push("/rooms");
         },
     },

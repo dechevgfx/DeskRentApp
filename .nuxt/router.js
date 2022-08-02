@@ -6,11 +6,13 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _1e024316 = () => interopDefault(import('../pages/bookings/index.vue' /* webpackChunkName: "pages/bookings/index" */))
 const _13cd5af5 = () => interopDefault(import('../pages/desks/index.vue' /* webpackChunkName: "pages/desks/index" */))
+const _be29d44c = () => interopDefault(import('../pages/home/index.vue' /* webpackChunkName: "pages/home/index" */))
 const _e15912b8 = () => interopDefault(import('../pages/login/index.vue' /* webpackChunkName: "pages/login/index" */))
 const _c7ac2e38 = () => interopDefault(import('../pages/profile/index.vue' /* webpackChunkName: "pages/profile/index" */))
 const _18a89a9e = () => interopDefault(import('../pages/register/index.vue' /* webpackChunkName: "pages/register/index" */))
 const _25ce3b73 = () => interopDefault(import('../pages/rooms/index.vue' /* webpackChunkName: "pages/rooms/index" */))
 const _df9ccafa = () => interopDefault(import('../pages/users/index.vue' /* webpackChunkName: "pages/users/index" */))
+const _f8c7554e = () => interopDefault(import('../pages/rooms/_roomId/index.vue' /* webpackChunkName: "pages/rooms/_roomId/index" */))
 const _5d5a39ca = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -33,6 +35,10 @@ export const routerOptions = {
     component: _13cd5af5,
     name: "desks"
   }, {
+    path: "/home",
+    component: _be29d44c,
+    name: "home"
+  }, {
     path: "/login",
     component: _e15912b8,
     name: "login"
@@ -52,6 +58,10 @@ export const routerOptions = {
     path: "/users",
     component: _df9ccafa,
     name: "users"
+  }, {
+    path: "/rooms/:roomId",
+    component: _f8c7554e,
+    name: "rooms-roomId"
   }, {
     path: "/",
     component: _5d5a39ca,

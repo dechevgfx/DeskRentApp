@@ -1,5 +1,17 @@
 {
+  "AllRoomsDesign": {
+    "description": "Auto imported from components/AllRoomsDesign.vue"
+  },
   "Heading": {
     "description": "Auto imported from components/Heading.vue"
+  },
+  "Home": {
+    "description": "Auto imported from components/Home.vue"
+  },
+  "RoomCard": {
+    "description": "Auto imported from components/RoomCard.vue"
+  },
+  "RoomDetails": {
+    "description": "Auto imported from components/RoomDetails.vue"
   }
 }

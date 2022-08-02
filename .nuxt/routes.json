@@ -14,6 +14,13 @@
     "_name": "_13cd5af5"
   },
   {
+    "name": "home",
+    "path": "/home",
+    "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/home/index.vue",
+    "chunkName": "pages/home/index",
+    "_name": "_be29d44c"
+  },
+  {
     "name": "login",
     "path": "/login",
     "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/login/index.vue",
@@ -47,6 +54,13 @@
     "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/users/index.vue",
     "chunkName": "pages/users/index",
     "_name": "_df9ccafa"
+  },
+  {
+    "name": "rooms-roomId",
+    "path": "/rooms/:roomId",
+    "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/rooms/_roomId/index.vue",
+    "chunkName": "pages/rooms/_roomId/index",
+    "_name": "_f8c7554e"
   },
   {
     "name": "index",

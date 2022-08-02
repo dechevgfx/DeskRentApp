@@ -26,7 +26,6 @@
                 </button>
             </form>
         </div>
-        <!-- Log In Image -->
         <div class="login-image">
             <img src="@/assets/img/login.jpg" alt="" />
         </div>
@@ -47,7 +46,8 @@ export default {
             this.$store.commit("login", [email.value, password.value]);
 
             if (this.$store.state.currentUser) {
-                this.$router.push("rooms");
+                //Open home because its an existing customer (greet the customer)
+                this.$router.push("home");
             }
         },
     },

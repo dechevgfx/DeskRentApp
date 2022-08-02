@@ -2,5 +2,5 @@
     <Home></Home>
 </template>
 <style scoped>
-@import url(../assets/style.css);
+@import url(@/assets/style.css);
 </style>
