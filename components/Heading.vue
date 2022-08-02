@@ -3,7 +3,7 @@
   <header>
     <div class="nav container">
       <!-- Logo -->
-      <NuxtLink class="logo" to="`/`">DESK RENT</NuxtLink>
+      <NuxtLink class="logo" :to="`/`">DESK RENT</NuxtLink>
       <!-- Nav List -->
       <ul class="navbar">
         <li v-if="user">
