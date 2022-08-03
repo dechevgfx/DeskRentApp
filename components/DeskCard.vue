@@ -26,7 +26,7 @@
                     @click="displayContent"
                     class="btn"
                 >
-                    Rent
+                    <a href="#top">Rent</a>
                 </button>
                 <button
                     v-if="
