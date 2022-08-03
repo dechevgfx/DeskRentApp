@@ -13,7 +13,3 @@
         </div>
     </section>
 </template>
-
-<style scoped>
-@import url(../../assets/style.css);
-</style>

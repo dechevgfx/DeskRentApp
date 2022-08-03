@@ -17,6 +17,12 @@
   "Home": {
     "description": "Auto imported from components/Home.vue"
   },
+  "Profile": {
+    "description": "Auto imported from components/Profile.vue"
+  },
+  "RentForm": {
+    "description": "Auto imported from components/RentForm.vue"
+  },
   "RoomCard": {
     "description": "Auto imported from components/RoomCard.vue"
   },

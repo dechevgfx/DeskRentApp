@@ -4,6 +4,8 @@ export { default as DeskCard } from '../../components/DeskCard.vue'
 export { default as DeskDetails } from '../../components/DeskDetails.vue'
 export { default as Heading } from '../../components/Heading.vue'
 export { default as Home } from '../../components/Home.vue'
+export { default as Profile } from '../../components/Profile.vue'
+export { default as RentForm } from '../../components/RentForm.vue'
 export { default as RoomCard } from '../../components/RoomCard.vue'
 export { default as RoomDetails } from '../../components/RoomDetails.vue'
 

@@ -43,6 +43,13 @@ export const mutations = {
         }
     },
 
+    logout(state) {
+        state.currentUser = null;
+    },
+
+    addRentedDesk(state, deskId) {
+        state.currentUser.rentedDesks.push(deskId);
+    },
 };
 
 export const actions = {

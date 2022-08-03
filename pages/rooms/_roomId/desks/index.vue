@@ -1,6 +1,9 @@
 <template>
     <div>
-        <a name="top"></a>
+        <a id="top"></a>
+        <div>
+            <RentForm v-if="formDisplay" />
+        </div>
         <div class="grid-container">
             <AllDesks @formDisplay="displayContent" />
         </div>
@@ -11,7 +14,9 @@
 import AllDesks from "../../../../components/AllDesks.vue";
 export default {
     data() {
-        return {};
+        return {
+            formDisplay: false,
+        };
     },
     methods: {
         displayContent() {

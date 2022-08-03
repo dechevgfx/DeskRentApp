@@ -77,7 +77,6 @@ export default {
         roomID() {
             return this.room._id;
         },
-
         room() {
             const id = Number(this.$route.params.roomId);
             const room = this.$store.state.rooms.rooms.find(
@@ -93,3 +92,4 @@ export default {
     },
 };
 </script>
+

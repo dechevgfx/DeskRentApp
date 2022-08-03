@@ -3,6 +3,7 @@
         <div class="desks-container container">
                     <div v-for="desk of desks">
                         <DeskCard
+                            @formDisplay="displayContent"
                             :room="room"
                             :desk="desk"
                         />
@@ -16,7 +17,11 @@ export default {
     data() {
         return {};
     },
-    methods: {},
+    methods: {
+        displayContent() {
+            this.$emit("formDisplay");
+        },
+    },
     computed: {
         room() {
             const id = Number(this.$route.params.roomId);

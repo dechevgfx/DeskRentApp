@@ -23,6 +23,7 @@
                 <br />
                 <button
                     v-if="!desk.isTaken"
+                    @click="displayContent"
                     class="btn"
                 >
                     <a href="#top">Rent</a>
@@ -35,7 +36,7 @@
                     "
                     class="btn"
                 >
-                    <NuxtLink :to="`desks/${desk._id}`" v-if="goTo"
+                    <NuxtLink :to="`desks/${desk._id}`" v-if="showLink"
                         >Details</NuxtLink
                     >
                 </button>
@@ -47,7 +48,7 @@
                     "
                     class="btn"
                 >
-                    <NuxtLink :to="`desks/${desk._id}`" v-if="goTo"
+                    <NuxtLink :to="`desks/${desk._id}`" v-if="showLink"
                         >Details</NuxtLink
                     >
                 </button>
@@ -60,7 +61,7 @@
                     "
                     class="btn"
                 >
-                    <NuxtLink :to="`desks`" v-if="goTo">Release</NuxtLink>
+                    <NuxtLink :to="`desks`" v-if="showLink">Release</NuxtLink>
                 </button>
             </div>
 
@@ -89,9 +90,27 @@
 export default {
     props: ["desk", "room"],
     data() {
-        return {};
+        return {
+            formDisplay: false,
+        };
     },
-    methods: {},
+    methods: {
+        freeDesk() {
+            this.$store.commit("removeRentedDesk", [
+                this.desk._id,
+                this.desk.rentedBy,
+            ]);
+            this.$store.commit("desks/freeDesk", this.desk._id);
+            this.$store.commit("rooms/freeDesk", [
+                this.desk.roomId,
+                this.desk._id,
+            ]);
+        },
+        displayContent() {
+            this.$store.commit("desks/selectDeskToRent", this.desk);
+            this.$emit("formDisplay");
+        },
+    },
     computed: {
         location() {
             return this.room.city;
@@ -102,7 +121,7 @@ export default {
         currentUser() {
             return this.$store.state.currentUser;
         },
-        goTo() {
+        showLink() {
             return (
                 this.currentUser.role === "admin" ||
                 this.room.manager === this.currentUser.email ||

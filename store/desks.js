@@ -40,6 +40,22 @@ export const state = () => ({
 export const getter = {};
 
 export const mutations = {
+    rentDesk(state, params) {
+        const [id, email, weeks] = params;
+        let desk = state.desks.find((x) => x._id === id);
+        desk.rentedPeriod = weeks;
+        desk.rentedBy = email;
+        desk.isTaken = true;
+        desk.nextAvailableDate = getDeskFreeDate(weeks);
+    },
+    
+    selectDeskToRent(state, desk) {
+        state.selectedDeskToRent = desk;
+    },
+    resetSelectedDesk(state) {
+        state.selectDeskToRent = null;
+    },
+
 };
 
 export const actions = {};

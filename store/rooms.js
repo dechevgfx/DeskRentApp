@@ -57,7 +57,10 @@ export const getter = {
 };
 
 export const mutations = {
-
+    rentDesk(state, [roomId, deskId]) {
+        let room = state.rooms.find((x) => x._id === roomId);
+        room.rentedDesksCount += 1;
+    },
 };
 
 export const actions = {};
