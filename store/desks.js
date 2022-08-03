@@ -48,6 +48,13 @@ export const mutations = {
         desk.isTaken = true;
         desk.nextAvailableDate = getDeskFreeDate(weeks);
     },
+    freeDesk(state, deskId) {
+        let desk = state.desks.find((x) => x._id === deskId);
+        desk.rentedPeriod = null;
+        desk.rentedBy = null;
+        desk.isTaken = false;
+        desk.nextAvailableDate = null;
+    },
     
     selectDeskToRent(state, desk) {
         state.selectedDeskToRent = desk;

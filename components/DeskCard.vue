@@ -26,32 +26,17 @@
                     @click="displayContent"
                     class="btn"
                 >
-                    <a href="#top">Rent</a>
+                    Rent
                 </button>
                 <button
-                    v-if="
-                        desk.rentedBy === currentUser.email &&
-                        currentUser.role !== 'admin' &&
-                        currentUser.role !== 'RoomManager'
-                    "
+                    v-if="showLink"
                     class="btn"
                 >
                     <NuxtLink :to="`desks/${desk._id}`" v-if="showLink"
                         >Details</NuxtLink
                     >
                 </button>
-                <button
-                    v-if="
-                        currentUser.role === 'admin' ||
-                        (currentUser.role === 'RoomManager' &&
-                            desk.roomId == currentUser.roomsManaged)
-                    "
-                    class="btn"
-                >
-                    <NuxtLink :to="`desks/${desk._id}`" v-if="showLink"
-                        >Details</NuxtLink
-                    >
-                </button>
+                
                 <button
                     @click="freeDesk"
                     v-if="

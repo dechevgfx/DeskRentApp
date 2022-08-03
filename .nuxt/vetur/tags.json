@@ -5,6 +5,9 @@
   "AllRoomsDesign": {
     "description": "Auto imported from components/AllRoomsDesign.vue"
   },
+  "Bookings": {
+    "description": "Auto imported from components/Bookings.vue"
+  },
   "DeskCard": {
     "description": "Auto imported from components/DeskCard.vue"
   },
@@ -19,6 +22,9 @@
   },
   "Profile": {
     "description": "Auto imported from components/Profile.vue"
+  },
+  "ProfileDesk": {
+    "description": "Auto imported from components/ProfileDesk.vue"
   },
   "RentForm": {
     "description": "Auto imported from components/RentForm.vue"

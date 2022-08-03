@@ -1,6 +1,5 @@
 <template>
     <div>
-        <a id="top"></a>
         <div>
             <RentForm v-if="formDisplay" />
         </div>

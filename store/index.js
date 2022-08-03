@@ -50,6 +50,10 @@ export const mutations = {
     addRentedDesk(state, deskId) {
         state.currentUser.rentedDesks.push(deskId);
     },
+    removeRentedDesk(state, [deskId, email]) {
+        let user = state.users.find((x) => x.email === email);
+        user.rentedDesks = user.rentedDesks.filter((x) => x !== deskId);
+    },
 };
 
 export const actions = {
