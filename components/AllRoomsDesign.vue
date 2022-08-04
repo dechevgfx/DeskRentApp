@@ -10,7 +10,7 @@
         >
             <div class="box">
                 <button @click="formDisplay = !formDisplay" class="btn add">
-                    Add New Room
+                    ADD NEW ROOM
                 </button>
                 <AddRoom v-if="formDisplay"></AddRoom>
             </div>

@@ -11,7 +11,7 @@
             <div v-else class="home-text">
                 <h1>Welcome <br />back, <br />{{ user.name }}</h1>
                 <button class="btn">
-                    <nuxt-link :to="`/rooms`">View Our Rooms</nuxt-link>
+                    <nuxt-link :to="`/rooms`">CHECK OUR ROOMS</nuxt-link>
                 </button>
             </div>
         </section>

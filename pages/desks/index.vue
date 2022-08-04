@@ -6,10 +6,10 @@
         </div>
         <div class="desks-container container">
             <div class="box">
-                <button class="btn add">
-                    On Click -> Add Desk
+                <button @click="formDisplay = !formDisplay" class="btn add">
+                    ADD NEW DESK
                 </button>
-                <div>ADD DESK FORM SHOULD BE HERE</div>
+                <AddDesk v-if="formDisplay"></AddDesk>
             </div>
         </div>
         <br />
@@ -27,3 +27,13 @@
         </div>
     </section>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            formDisplay: false,
+        };
+    }
+}
+</script>

@@ -1,7 +1,10 @@
+export { default as AddDesk } from '../../components/AddDesk.vue'
+export { default as AddRoom } from '../../components/AddRoom.vue'
 export { default as AllDesks } from '../../components/AllDesks.vue'
 export { default as AllRoomsDesign } from '../../components/AllRoomsDesign.vue'
 export { default as Bookings } from '../../components/Bookings.vue'
 export { default as DeskCard } from '../../components/DeskCard.vue'
+export { default as DeskControl } from '../../components/DeskControl.vue'
 export { default as DeskDetails } from '../../components/DeskDetails.vue'
 export { default as Heading } from '../../components/Heading.vue'
 export { default as Home } from '../../components/Home.vue'
@@ -10,6 +13,7 @@ export { default as ProfileDesk } from '../../components/ProfileDesk.vue'
 export { default as RentForm } from '../../components/RentForm.vue'
 export { default as RoomCard } from '../../components/RoomCard.vue'
 export { default as RoomDetails } from '../../components/RoomDetails.vue'
+export { default as UserControl } from '../../components/UserControl.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

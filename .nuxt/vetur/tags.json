@@ -1,4 +1,10 @@
 {
+  "AddDesk": {
+    "description": "Auto imported from components/AddDesk.vue"
+  },
+  "AddRoom": {
+    "description": "Auto imported from components/AddRoom.vue"
+  },
   "AllDesks": {
     "description": "Auto imported from components/AllDesks.vue"
   },
@@ -10,6 +16,9 @@
   },
   "DeskCard": {
     "description": "Auto imported from components/DeskCard.vue"
+  },
+  "DeskControl": {
+    "description": "Auto imported from components/DeskControl.vue"
   },
   "DeskDetails": {
     "description": "Auto imported from components/DeskDetails.vue"
@@ -34,5 +43,8 @@
   },
   "RoomDetails": {
     "description": "Auto imported from components/RoomDetails.vue"
+  },
+  "UserControl": {
+    "description": "Auto imported from components/UserControl.vue"
   }
 }
