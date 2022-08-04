@@ -62,6 +62,18 @@ export const mutations = {
     resetSelectedDesk(state) {
         state.selectDeskToRent = null;
     },
+    addNewDesk(state, [roomId, deskSize, deskPosition, deskPrice]) {
+        state.latestDeskId += 1;
+
+        const desk = new Desk(
+            state.latestDeskId,
+            Number(deskPrice),
+            deskSize,
+            deskPosition,
+            Number(roomId),
+        );
+        state.desks.push(desk);
+    },
 
 };
 

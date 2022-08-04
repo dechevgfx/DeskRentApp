@@ -22,6 +22,7 @@ export default {
             this.formDisplay = true;
         },
     },
+
     components: { AllDesks },
     middleware: "authentication",
 };

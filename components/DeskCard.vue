@@ -44,7 +44,7 @@
                         desk.roomId == currentUser.roomsManaged &&
                         desk.isTaken
                     "
-                    class="btn"
+                    class="btn yellow"
                 >
                     <NuxtLink :to="`desks`" v-if="showLink">Release</NuxtLink>
                 </button>

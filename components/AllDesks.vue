@@ -1,13 +1,26 @@
 <template>
     <section class="desks container" id="desks">
+        <br />
+        <div
+            v-if="room.manager == currentUser.email"
+            class="desks-container container"
+        >
+            <div class="box">
+                <button @click="showForm = !showForm" class="btn add">
+                    ADD NEW DESK
+                </button>
+                <AddDesk v-if="showForm"></AddDesk>
+            </div>
+        </div>
+
         <div class="desks-container container">
-                    <div v-for="desk of desks">
-                        <DeskCard
-                            @formDisplay="displayContent"
-                            :room="room"
-                            :desk="desk"
-                        />
-                    </div>
+            <div v-for="desk of desks">
+                <DeskCard
+                    @formDisplay="displayContent"
+                    :room="room"
+                    :desk="desk"
+                />
+            </div>
         </div>
     </section>
 </template>
@@ -15,7 +28,9 @@
 <script>
 export default {
     data() {
-        return {};
+        return {
+            showForm: false,
+        };
     },
     methods: {
         displayContent() {
@@ -39,6 +54,9 @@ export default {
                 desks.push(desk);
             }
             return desks;
+        },
+        currentUser() {
+            return this.$store.state.currentUser;
         },
     },
 };

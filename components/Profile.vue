@@ -11,14 +11,15 @@
                     </h3>
                     <h3 class="grided">
                         <button class="btn" @click="handleLogout">
-                            Logout
+                            LOGOUT
                         </button>
                         <br />
-                        <button v-if="user.role == 'RoomManager'" class="btn">
-                            <nuxt-link :to="`/rooms/${user.roomsManaged}/desks`"
-                                >Manage Room</nuxt-link
-                            >
-                        </button>
+                            <button v-if="user.role == 'RoomManager'" class="btn">
+                                <nuxt-link
+                                    :to="`/rooms/${user.roomsManaged}/desks`"
+                                    >MANAGE ROOM</nuxt-link
+                                >
+                            </button>
                     </h3>
                 </div>
                 <br />
@@ -90,4 +91,3 @@ export default {
     middleware: "authentication",
 };
 </script>
-
