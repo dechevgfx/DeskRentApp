@@ -9,7 +9,9 @@
                 <li v-if="user">
                     <NuxtLink :to="`/bookings`">Bookings</NuxtLink>
                 </li>
-                <li v-if="user"><NuxtLink :to="`/rooms`">Rooms</NuxtLink></li>
+                <li v-if="user">
+                    <NuxtLink :to="`/rooms`">Rooms</NuxtLink>
+                </li>
                 <li v-if="user && user.role == 'admin'">
                     <NuxtLink :to="`/desks`">Desks</NuxtLink>
                 </li>

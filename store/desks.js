@@ -87,6 +87,9 @@ export const mutations = {
         );
         state.desks.push(desk);
     },
+    remove(state, deskId) {
+        state.desks = state.desks.filter((current) => current._id !== deskId);
+    },
 };
 
 export const actions = {};

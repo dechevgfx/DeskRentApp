@@ -1,8 +1,12 @@
 <template>
     <section class="desks container" id="desks">
-        <br />
+    <br>
+
         <div
-            v-if="room.manager == currentUser.email && currentUser.role == 'RoomManager'"
+            v-if="
+                room.manager == currentUser.email &&
+                currentUser.role == 'RoomManager'
+            "
             class="desks-container container"
         >
             <div class="box">
@@ -12,7 +16,6 @@
                 <AddDesk v-if="showForm"></AddDesk>
             </div>
         </div>
-
         <div class="desks-container container">
             <div v-for="desk of desks">
                 <DeskCard

@@ -14,14 +14,14 @@
         </div>
         <br />
         <div class="desks-container container">
-            <div class="box">
+            <div v-if="desks.length > 0" class="box">
                 <ul>
-                    <li>
-                        List of desk which admin can control.
+                    <li v-for="desk of desks">
+                        <DeskControl :desk="desk"></DeskControl>
                     </li>
                 </ul>
             </div>
-            <div>
+            <div v-else class="box">
                 <p class="centre">There are no desks added</p>
             </div>
         </div>
@@ -29,11 +29,30 @@
 </template>
 
 <script>
+import DeskControl from "../../components/DeskControl.vue";
 export default {
     data() {
         return {
             formDisplay: false,
         };
-    }
-}
+    },
+    computed: {
+        // user() {
+        //     return this.$store.state.rooms.rooms;
+        // },
+        desks() {
+            return this.$store.state.desks.desks;
+        },
+    },
+    singleRoomDesks() {
+        let deskArr = [];
+        for (const desk of this.$store.state.desks.desks) {
+            if (desk.roomId == this.$store.state.rooms.rooms.roomsManaged)
+                deskArr.push(desk);
+        }
+        return deskArr;
+    },
+    components: { DeskControl },
+    middleware: ["authentication", "isAdmin"],
+};
 </script>

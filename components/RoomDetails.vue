@@ -39,7 +39,10 @@
                                     Maximum Capacity:
                                     {{ room.deskCapacity }} spaces
                                 </p>
-                                <span>Available: {{ freeSpaces }}</span>
+                                <span v-if="freeSpaces"
+                                    >Available: {{ freeSpaces }}</span
+                                >
+                                <span v-else>NO AVAILABLE SPACES.</span>
                                 <br />
 
                                 <NuxtLink
@@ -49,12 +52,22 @@
                                 >
                                     BOOK</NuxtLink
                                 >
-                                <div v-if="freeSpaces == 0">
-                                    <p>NO AVAILABLE SPACES</p>
-                                    <NuxtLink class="btn" v-if="user.role == 'admin'"
-                                        >GO TO DESKS PAGE</NuxtLink
-                                    >
-                                </div>
+
+                                <NuxtLink
+                                    :to="`/rooms`"
+                                    class="btn"
+                                    v-if="
+                                        user.role !== 'admin' && freeSpaces == 0
+                                    "
+                                    >GO BACK TO ROOMS</NuxtLink
+                                >
+                                <NuxtLink
+                                    :to="`/desks`"
+                                    class="btn"
+                                    v-if="user.role == 'admin' && freeSpaces == 0"
+                                    >ADD DESK</NuxtLink
+                                >
+                                <br />
                             </div>
                         </div>
                     </div>
@@ -92,4 +105,3 @@ export default {
     },
 };
 </script>
-

@@ -36,7 +36,7 @@
 export default {
     data() {
         return {
-            city: "",
+            roomLocation: "",
             officeName: "",
             size: "0",
         };

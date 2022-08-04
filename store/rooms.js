@@ -82,6 +82,10 @@ export const mutations = {
         );
         state.rooms.push(newRoom);
     },
+    remove(state, [roomId, deskId]) {
+        let room = state.rooms.find((current) => current._id === roomId);
+        room.deskIds = room.deskIds.filter((current) => current !== deskId);
+    },
 };
 
 export const actions = {};
