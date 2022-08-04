@@ -69,6 +69,19 @@ export const mutations = {
         let room = state.rooms.find((x) => x._id === roomId);
         room.deskIds.push(deskId);
     },
+    addNewRoom(state, [roomLocation, officeName, size]) {
+        state.lastRoomId++;
+        state.latestDeskId++;
+
+        const newRoom = new Room(
+            roomLocation,
+            state.lastRoomId,
+            size,
+            officeName,
+            [state.latestDeskId],
+        );
+        state.rooms.push(newRoom);
+    },
 };
 
 export const actions = {};

@@ -2,7 +2,7 @@
     <section class="desks container" id="desks">
         <br />
         <div
-            v-if="room.manager == currentUser.email"
+            v-if="room.manager == currentUser.email && currentUser.role == 'RoomManager'"
             class="desks-container container"
         >
             <div class="box">

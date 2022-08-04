@@ -55,7 +55,7 @@ export const mutations = {
         desk.isTaken = false;
         desk.nextAvailableDate = null;
     },
-    
+
     selectDeskToRent(state, desk) {
         state.selectedDeskToRent = desk;
     },
@@ -74,7 +74,19 @@ export const mutations = {
         );
         state.desks.push(desk);
     },
-
+    addNewRoom(state, [roomLocation, officeName, size]) {
+        state.latestDeskId++;
+        state.latestRoomId++;
+        let desk = new Desk(
+            state.latestDeskId,
+            200,
+            "Large",
+            "Left",
+            state.latestRoomId,
+            officeName,
+        );
+        state.desks.push(desk);
+    },
 };
 
 export const actions = {};
