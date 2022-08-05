@@ -13,7 +13,7 @@ export { default as ProfileDesk } from '../../components/ProfileDesk.vue'
 export { default as RentForm } from '../../components/RentForm.vue'
 export { default as RoomCard } from '../../components/RoomCard.vue'
 export { default as RoomDetails } from '../../components/RoomDetails.vue'
-export { default as UserControl } from '../../components/UserControl.vue'
+export { default as UsersControl } from '../../components/UsersControl.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

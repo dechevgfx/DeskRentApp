@@ -86,6 +86,15 @@ export const mutations = {
         let room = state.rooms.find((current) => current._id === roomId);
         room.deskIds = room.deskIds.filter((current) => current !== deskId);
     },
+    changeRoomManager(state, props) {
+        const [roomId, manager] = props;
+        let room = state.rooms.find((current) => current._id === roomId);
+        room.manager = manager;
+    },
+    demoteRoomManager(state, roomId) {
+        let room = state.rooms.find((current) => current._id === roomId);
+        room.manager = "admin";
+    },
 };
 
 export const actions = {};

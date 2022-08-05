@@ -21,4 +21,4 @@ You can directly use them in pages and other components without the need to impo
 - `<RentForm>` | `<rent-form>` (components/RentForm.vue)
 - `<RoomCard>` | `<room-card>` (components/RoomCard.vue)
 - `<RoomDetails>` | `<room-details>` (components/RoomDetails.vue)
-- `<UserControl>` | `<user-control>` (components/UserControl.vue)
+- `<UsersControl>` | `<users-control>` (components/UsersControl.vue)

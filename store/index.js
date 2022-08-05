@@ -37,9 +37,10 @@ export const mutations = {
             state.currentUser = newUser;
             state.users.push(newUser);
         } else if (mailArray.includes(email)) {
-            state.error = "Email is already registered. Please try again with different email.";
+            state.error =
+                "Email is already registered. Please try again with different email.";
         } else {
-          state.error = "Please fill out all fields and try again.";
+            state.error = "Please fill out all fields and try again.";
         }
     },
 
@@ -53,6 +54,28 @@ export const mutations = {
     removeRentedDesk(state, [deskId, email]) {
         let user = state.users.find((x) => x.email === email);
         user.rentedDesks = user.rentedDesks.filter((x) => x !== deskId);
+    },
+    promoteToManager(state, email) {
+        let user = state.users.find((current) => current.email === email);
+        user.role = "RoomManager";
+    },
+    demoteManager(state, email) {
+        let user = state.users.find((current) => current.email === email);
+        user.role = "client";
+    },
+    banUser(state, email) {
+        state.users = state.users.filter((current) => current.email !== email);
+    },
+    addManagedRoom(state, props) {
+        const [roomId, email] = props;
+
+        let user = state.users.find((current) => current.email === email);
+        user.roomsManaged.push(roomId);
+    },
+    removeManagedRoom(state, props) {
+        const [roomId, email] = props;
+        let user = state.users.find((current) => current.email === email);
+        user.roomsManaged = [];
     },
 };
 

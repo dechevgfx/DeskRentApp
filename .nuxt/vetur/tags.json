@@ -44,7 +44,7 @@
   "RoomDetails": {
     "description": "Auto imported from components/RoomDetails.vue"
   },
-  "UserControl": {
-    "description": "Auto imported from components/UserControl.vue"
+  "UsersControl": {
+    "description": "Auto imported from components/UsersControl.vue"
   }
 }

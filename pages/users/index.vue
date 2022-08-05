@@ -6,10 +6,23 @@
                 <p>Lorem ipsum dolor sit amet consectetur</p>
             </div>
             <div class="profile-card">
-                <div>
-                    ALL USERS LIST
+                <div v-for="user of users">
+                    <UsersControl :user="user"></UsersControl>
                 </div>
             </div>
         </div>
     </section>
 </template>
+
+<script>
+import UsersControl from "../../components/UsersControl.vue";
+export default {
+    computed: {
+        users() {
+            return this.$store.state.users;
+        },
+    },
+    components: { UsersControl },
+    middleware: ["authentication", "isAdmin"],
+};
+</script>

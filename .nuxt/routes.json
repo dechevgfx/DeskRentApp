@@ -3,72 +3,84 @@
     "name": "bookings",
     "path": "/bookings",
     "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/bookings/index.vue",
-    "chunkName": "pages/bookings/index"
+    "chunkName": "pages/bookings/index",
+    "_name": "_1e024316"
   },
   {
     "name": "desks",
     "path": "/desks",
     "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/desks/index.vue",
-    "chunkName": "pages/desks/index"
+    "chunkName": "pages/desks/index",
+    "_name": "_13cd5af5"
   },
   {
     "name": "home",
     "path": "/home",
     "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/home/index.vue",
-    "chunkName": "pages/home/index"
+    "chunkName": "pages/home/index",
+    "_name": "_be29d44c"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/login/index.vue",
-    "chunkName": "pages/login/index"
+    "chunkName": "pages/login/index",
+    "_name": "_e15912b8"
   },
   {
     "name": "profile",
     "path": "/profile",
     "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/profile/index.vue",
-    "chunkName": "pages/profile/index"
+    "chunkName": "pages/profile/index",
+    "_name": "_c7ac2e38"
   },
   {
     "name": "register",
     "path": "/register",
     "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/register/index.vue",
-    "chunkName": "pages/register/index"
+    "chunkName": "pages/register/index",
+    "_name": "_18a89a9e"
   },
   {
     "name": "rooms",
     "path": "/rooms",
     "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/rooms/index.vue",
-    "chunkName": "pages/rooms/index"
+    "chunkName": "pages/rooms/index",
+    "_name": "_25ce3b73"
   },
   {
     "name": "users",
     "path": "/users",
     "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/users/index.vue",
-    "chunkName": "pages/users/index"
+    "chunkName": "pages/users/index",
+    "_name": "_df9ccafa"
   },
   {
     "name": "rooms-roomId",
     "path": "/rooms/:roomId",
     "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/rooms/_roomId/index.vue",
-    "chunkName": "pages/rooms/_roomId/index"
+    "chunkName": "pages/rooms/_roomId/index",
+    "_name": "_f8c7554e"
   },
   {
     "name": "rooms-roomId-desks",
     "path": "/rooms/:roomId/desks",
     "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/rooms/_roomId/desks/index.vue",
-    "chunkName": "pages/rooms/_roomId/desks/index"
+    "chunkName": "pages/rooms/_roomId/desks/index",
+    "_name": "_552b6178"
   },
   {
     "name": "rooms-roomId-desks-deskId",
     "path": "/rooms/:roomId/desks/:deskId",
     "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/rooms/_roomId/desks/_deskId.vue",
-    "chunkName": "pages/rooms/_roomId/desks/_deskId"
+    "chunkName": "pages/rooms/_roomId/desks/_deskId",
+    "_name": "_efc17bb6"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/gdfx/Documents/GitHub/DeskRentApp/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_5d5a39ca"
   }
 ]
