@@ -10,6 +10,12 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-brands-svg-icons": "^6.1.2",
+    "@fortawesome/free-regular-svg-icons": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/vue-fontawesome": "^2.0.8",
+    "@nuxtjs/fontawesome": "^1.1.2",
     "@vueblocks/vue-use-core": "^0.2.11",
     "@vueblocks/vue-use-vuex": "^0.2.11",
     "core-js": "^3.19.3",
@@ -18,9 +24,11 @@
     "vue": "^2.6.14",
     "vue-server-renderer": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
+    "vue-window-size": "^0.6.2",
     "webpack": "^4.46.0"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.2",
     "gh-pages": "^4.0.0",
     "push-dir": "^0.4.1"
   }

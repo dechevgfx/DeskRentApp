@@ -390,10 +390,17 @@ input {
     .nav {
         padding: 10px 0;
     }
-
-    .logo {
+    .navbar-mobile{
+        display: flex;
+        font-size: 24px;
+        gap: 15px;
+        }
+        .very-small-text{
+            font-size: 8px;
+        }
+    /* .logo {
         display: none;
-    }
+    } */
 
     
     #menu:checked~.navbar {
@@ -569,4 +576,24 @@ select:focus {
 
 .left {
     text-align: left;
+}
+.navbar-mobile{
+display: flex;
+font-size: 22px;
+gap: 15px;
+}
+.navbar-mobile a:focus{
+    color: #00ae4e;
+    border-top: 2px #00ae4e;
+    padding: 0;
+}
+.very-small-text{
+    font-size: 6px;
+}
+.mobile-text{
+    text-align: center;
+    align-items: center;
+}
+.mobile-text:hover{
+    transform: scale(1.2);
 }

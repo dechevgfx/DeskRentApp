@@ -14,6 +14,7 @@ import { createStore } from './store.js'
 /* Plugins */
 
 import nuxt_plugin_plugin_4b4e1f04 from 'nuxt_plugin_plugin_4b4e1f04' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_fontawesome_4b937cd6 from 'nuxt_plugin_fontawesome_4b937cd6' // Source: ./fontawesome.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -209,6 +210,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_plugin_4b4e1f04 === 'function') {
     await nuxt_plugin_plugin_4b4e1f04(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_fontawesome_4b937cd6 === 'function') {
+    await nuxt_plugin_fontawesome_4b937cd6(app.context, inject)
   }
 
   // Lock enablePreview in context
