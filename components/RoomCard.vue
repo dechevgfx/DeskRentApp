@@ -1,9 +1,6 @@
 <template>
     <div>
-        <div
-            @click="navigateToRoom"
-            class="box hovered-box"
-        >
+        <div @click="navigateToRoom" class="box">
             <img v-if="roomID == 1" src="@/assets/img/p1.jpg" />
             <img v-if="roomID == 2" src="@/assets/img/p2.jpg" />
             <img v-if="roomID == 3" src="@/assets/img/p3.jpg" />
@@ -16,10 +13,15 @@
                 <div class="text">
                     <h3>{{ room.name.toUpperCase() }}</h3>
                     <p>{{ location }}</p>
-                    <p>Room Size: {{ room.size }}</p>
+                    <p>
+                        Room Size: <strong>{{ room.size }}</strong>
+                    </p>
                 </div>
                 <div>
-                    <span>Available spaces: {{ freeSpaces }}</span>
+                    <span
+                        >Available spaces:
+                        <strong>{{ freeSpaces }}</strong></span
+                    >
                 </div>
             </div>
         </div>

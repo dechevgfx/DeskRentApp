@@ -5,7 +5,7 @@
             <!-- Logo -->
             <NuxtLink class="logo" to="/">DESK RENT</NuxtLink>
             <!-- Nav List -->
-            <ul class="navbar" v-if="windowWidth >= 768">
+            <ul class="navbar" v-if="windowWidth >= 638">
                 <li v-if="user">
                     <NuxtLink :to="`/bookings`">Bookings</NuxtLink>
                 </li>
@@ -19,7 +19,7 @@
                     <NuxtLink :to="`/users`">Users</NuxtLink>
                 </li>
             </ul>
-            <ul class="navbar-mobile" v-if="windowWidth < 768">
+            <ul class="navbar-mobile" v-if="windowWidth < 638">
                 <li v-if="user">
                     <NuxtLink :to="`/bookings`">
                         <div class="mobile-text">

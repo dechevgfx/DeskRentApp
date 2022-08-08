@@ -33,7 +33,7 @@ section {
 }
 
 .container {
-    max-width: 1068px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -168,7 +168,7 @@ header {
 }
 
 .room-type .box p {
-    font-size: 00.938rem;
+    font-size: 1rem;
 }
 
 /* desks */
@@ -177,13 +177,12 @@ header {
     margin-bottom: 2rem;
 }
 
-
 .heading h2 {
     font-size: 1.7rem;
 }
 
 .heading p {
-    font-size: 0.938rem;
+    font-size: 1rem;
 }
 
 .desks {
@@ -206,7 +205,7 @@ header {
 }
 
 .desks-container .box:hover {
-    transform: translateY(-10px);
+    transform: scale(1.05);
     transition: 0.5s;
     cursor: pointer;
 }
@@ -321,8 +320,6 @@ input {
     font-size: 14px;
 }
 
-
-
 .button-container button {
     margin-bottom: 5px;
     width: 100%;
@@ -374,7 +371,6 @@ input {
 }
 
 @media (max-width: 880px) {
-
     .desks-container {
         grid-template-columns: repeat(auto-fit, minmax(200px, auto));
         gap: 1rem;
@@ -390,22 +386,6 @@ input {
     .nav {
         padding: 10px 0;
     }
-    .navbar-mobile{
-        display: flex;
-        font-size: 24px;
-        gap: 15px;
-        }
-        .very-small-text{
-            font-size: 8px;
-        }
-    /* .logo {
-        display: none;
-    } */
-
-    
-    #menu:checked~.navbar {
-        clip-path: circle(144% at 100% 1%);
-    }
 
     .heading h2 {
         font-size: 1.4rem;
@@ -415,6 +395,14 @@ input {
 @media (max-width: 638px) {
     .login {
         grid-template-columns: 0.8fr 1fr;
+    }
+    .navbar-mobile {
+        display: flex;
+        font-size: 24px;
+        gap: 15px;
+    }
+    .very-small-text {
+        font-size: 8px;
     }
 
     .login {
@@ -449,7 +437,6 @@ input {
     .desks-container {
         padding: 0;
     }
-
 }
 
 /* booking list */
@@ -577,23 +564,37 @@ select:focus {
 .left {
     text-align: left;
 }
-.navbar-mobile{
-display: flex;
-font-size: 22px;
-gap: 15px;
+.navbar-mobile {
+    display: flex;
+    font-size: 22px;
+    gap: 15px;
 }
-.navbar-mobile a:focus{
+.navbar-mobile a:focus {
     color: #00ae4e;
     border-top: 2px #00ae4e;
     padding: 0;
 }
-.very-small-text{
+.very-small-text {
     font-size: 6px;
 }
-.mobile-text{
+.mobile-text {
     text-align: center;
     align-items: center;
 }
-.mobile-text:hover{
+.mobile-text:hover {
     transform: scale(1.2);
+}
+
+.flex {
+    display: flex;
+}
+.right {
+    justify-content: flex-end;
+}
+hr {
+    all: unset;
+}
+.hr {
+    width: 6px;
+    background: #00cd74;
 }

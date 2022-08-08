@@ -33,7 +33,17 @@
                         >
                     </p>
                 </div>
+                <br />
+                <div class="box" v-if="user.role === 'admin'">
+                    <p v-if="room.manager">
+                        Manager:
+                        <span>{{
+                            user.email === room.manager ? "You" : room.manager
+                        }}</span>
+                    </p>
+                </div>
             </div>
+
             <div class="desks-container container">
                 <div class="box">
                     <img
@@ -66,7 +76,7 @@
                         src="@/assets/img/p6.jpg"
                         alt=""
                     />
-                                        <img
+                    <img
                         v-if="desk.roomId > 6"
                         src="@/assets/img/newRoom.jpeg"
                         alt=""
@@ -96,7 +106,6 @@
                             </p>
                             <br />
                         </div>
-
                     </div>
                 </div>
             </div>

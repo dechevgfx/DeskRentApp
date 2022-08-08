@@ -9,22 +9,42 @@
             <img v-if="desk.roomId == 6" src="../assets/img/p6.jpg" />
             <img v-if="desk.roomId > 6" src="../assets/img/newRoom.jpeg" />
             <div>
-                <div>
-                    <p>Room ID: {{ desk.roomId }} - Desk ID: {{ desk._id }}</p>
-                    <p>Desk Size: {{ desk.size }}</p>
-                    <p>Desk Position: {{ desk.position }}</p>
-                    <p>
-                        Available on:
-                        {{
-                            desk.nextAvailableDate
-                                ? desk.nextAvailableDate
-                                : "NOW"
-                        }}
-                    </p>
-                    <p v-if="desk.nextAvailableDate">
-                        Rented by: {{ desk.rentedBy }}
-                    </p>
+                <br />
+
+                <div class="flex">
+                    <div class="centre">
+                        <p>
+                            Room ID: <strong>{{ desk.roomId }}</strong>
+                        </p>
+                        <p>
+                            Desk ID:
+                            <strong>{{ desk._id }}</strong>
+                        </p>
+                        <p>
+                            Available on:
+                            <strong>
+                                {{
+                                    desk.nextAvailableDate
+                                        ? desk.nextAvailableDate
+                                        : "NOW"
+                                }}</strong
+                            >
+                        </p>
+                        <p v-if="desk.nextAvailableDate">
+                            Rented by: <strong>{{ desk.rentedBy }}</strong>
+                        </p>
+                    </div>
+                    <hr class="hr" />
+                    <div class="centre">
+                        <p>
+                            Desk Size: <strong>{{ desk.size }}</strong>
+                        </p>
+                        <p>
+                            Desk Position: <strong>{{ desk.position }}</strong>
+                        </p>
+                    </div>
                 </div>
+
                 <br />
                 <div class="grided">
                     <button @click="deleteDesk" class="btn red">

@@ -10,6 +10,7 @@
                     placeholder="ENTER ROOM LOCATION"
                 />
             </div>
+            <br />
             <div class="box">
                 <input
                     class="no-border"
@@ -18,6 +19,8 @@
                     placeholder="ENTER OFFICE NAME"
                 />
             </div>
+            <br />
+
             <div class="box">
                 <select v-model="size">
                     <option disabled selected value="0">ROOM SIZE</option>
@@ -26,9 +29,8 @@
                 </select>
             </div>
             <br />
-            <br />
-            <button @click="addRoom" class="btn add">Add</button>
         </div>
+        <button @click="addRoom" class="btn add">Add</button>
     </div>
 </template>
 
