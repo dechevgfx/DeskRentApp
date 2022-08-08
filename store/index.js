@@ -22,6 +22,8 @@ export const mutations = {
 
         if (user && user.password === params[1]) {
             state.currentUser = user;
+        } else if (!user || !user.password !== params[1]) {
+            state.error = "Wrong email or password. Please try again!";
         }
     },
 

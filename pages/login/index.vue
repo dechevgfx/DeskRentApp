@@ -2,6 +2,12 @@
     <div class="login container">
         <div class="login-container">
             <h1 class="heading">Log In</h1>
+            <p>
+                Don't have an account 
+                <nuxt-link class="container-line" :to="`/register`"
+                    ><strong>Sign Up Now</strong></nuxt-link
+                >
+            </p>
             <div class="error" v-if="error">
                 {{ error }}
             </div>

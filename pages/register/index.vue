@@ -2,8 +2,15 @@
     <div class="login container">
         <div class="login-container">
             <h2>Welcome , Let's get started</h2>
-            <p>Already have account <nuxt-link class="container-line" :to="`/login`">Log In</nuxt-link></p>
-
+            <p>
+                Already have account
+                <nuxt-link class="container-line" :to="`/login`"
+                    ><strong>Log In</strong></nuxt-link
+                >
+            </p>
+            <div class="error" v-if="error">
+                {{ error }}
+            </div>
             <form>
                 <span>Enter Your Email</span>
                 <input
@@ -21,7 +28,6 @@
                     id="fullName"
                     placeholder="Full Name"
                     v-model="fullName"
-
                 />
 
                 <span>Enter Your Password</span>
@@ -31,14 +37,8 @@
                     id="password"
                     placeholder="Password"
                     v-model="password"
-
                 />
-                <button
-                    @click="handleRegister"
-                    class="btn"
-                >
-                    Register
-                </button>
+                <button @click="handleRegister" class="btn">Register</button>
             </form>
         </div>
         <!-- Log In Image -->
@@ -52,9 +52,9 @@
 export default {
     data() {
         return {
-            fullName: '',
-            email: '',
-            password: '',
+            fullName: "",
+            email: "",
+            password: "",
         };
     },
     methods: {
@@ -74,5 +74,6 @@ export default {
             return this.$store.state.error;
         },
     },
+    middleware: ["noAuthentication"],
 };
 </script>
