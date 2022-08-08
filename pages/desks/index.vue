@@ -14,7 +14,7 @@
         </div>
         <br />
         <div class="desks-container container">
-            <div v-if="desks.length > 0" class="box">
+            <div v-if="desks.length > 0">
                 <ul>
                     <li v-for="desk of desks">
                         <DeskControl :desk="desk"></DeskControl>

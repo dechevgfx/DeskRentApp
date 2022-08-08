@@ -40,7 +40,7 @@
                         </p>
                     </div>
                     <br />
-                    <div class="grided">
+                    <div :class="showLink ? 'grided':''">
                         <br />
                         <button
                             v-if="!desk.isTaken"
