@@ -40,7 +40,7 @@
                         </p>
                     </div>
                     <br />
-                    <div :class="showLink ? 'grided':''">
+                    <div :class="showLink ? 'grided' : ''">
                         <br />
                         <button
                             v-if="!desk.isTaken"
@@ -62,18 +62,20 @@
                                 >Release</NuxtLink
                             >
                         </button>
-                        <br>
                         <button
-                            v-if="
-                                desk.rentedBy === currentUser.email &&
-                                currentUser.role !== 'admin' &&
-                                currentUser.role !== 'RoomManager'
-                            "
+                            v-if="desk.rentedBy === currentUser.email"
                             class="btn"
                         >
-                            <NuxtLink :to="`desks/${desk._id}`" v-if="showLink"
+                            <NuxtLink :to="`desks/${desk._id}`"
                                 >Details</NuxtLink
                             >
+                        </button>
+                        <br />
+                        <button
+                            class="btn"
+                            v-if="desk.rentedBy === currentUser.email"
+                        >
+                            <NuxtLink :to="`/profile`">Profile</NuxtLink>
                         </button>
                         <button
                             v-if="
@@ -87,7 +89,6 @@
                                 >Details</NuxtLink
                             >
                         </button>
-                        <br>
                     </div>
                 </div>
             </div>
