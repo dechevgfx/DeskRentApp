@@ -1,6 +1,16 @@
 <template>
     <div>
         <br />
+        <h5 class="centre container-line" v-if="desk.rentedBy === currentUser.email">
+            RENTED BY YOU!
+        </h5>
+        <h5 class="centre container-line" v-else>
+            Available:
+            <span>{{
+                desk.isTaken ? `From ${desk.nextAvailableDate}` : "NOW"
+            }}</span>
+        </h5>
+        <br />
         <div class="box">
             <img v-if="desk.roomId === 1" src="@/assets/img/p1.jpg" alt="" />
             <img v-if="desk.roomId === 2" src="@/assets/img/p2.jpg" alt="" />
@@ -13,17 +23,6 @@
                 <br />
                 <div class="content centre">
                     <div class="text">
-                        <h5 v-if="desk.rentedBy === currentUser.email">
-                            RENTED BY YOU!
-                        </h5>
-                        <h5 v-else>
-                            Available:
-                            <span>{{
-                                desk.isTaken
-                                    ? `From ${desk.nextAvailableDate}`
-                                    : "NOW"
-                            }}</span>
-                        </h5>
                         <br />
                         <h3>{{ roomName }}</h3>
                         <p>{{ location }}</p>
@@ -40,7 +39,7 @@
                         </p>
                     </div>
                     <br />
-                    <div :class="showLink ? 'grided' : ''">
+                    <div :class="showLink ? 'grided' : 'fix'">
                         <br />
                         <button
                             v-if="!desk.isTaken"
@@ -52,9 +51,10 @@
                         <button
                             @click="freeDesk"
                             v-if="
-                                currentUser.role === 'RoomManager' &&
-                                desk.roomId == currentUser.roomsManaged &&
-                                desk.isTaken
+                                (currentUser.role === 'RoomManager' &&
+                                    desk.roomId == currentUser.roomsManaged &&
+                                    desk.isTaken) ||
+                                (currentUser.role === 'admin' && desk.isTaken)
                             "
                             class="btn yellow"
                         >
@@ -63,7 +63,12 @@
                             >
                         </button>
                         <button
-                            v-if="desk.rentedBy === currentUser.email"
+                            v-if="
+                                (desk.rentedBy === currentUser.email &&
+                                    currentUser.role == 'client') ||
+                                (desk.rentedBy === currentUser.email &&
+                                    currentUser.roomsManaged[0] !== desk.roomId)
+                            "
                             class="btn"
                         >
                             <NuxtLink :to="`desks/${desk._id}`"
@@ -73,7 +78,12 @@
                         <br />
                         <button
                             class="btn"
-                            v-if="desk.rentedBy === currentUser.email"
+                            v-if="
+                                (desk.rentedBy === currentUser.email &&
+                                    currentUser.role == 'client') ||
+                                (desk.rentedBy === currentUser.email &&
+                                    currentUser.roomsManaged[0] !== desk.roomId)
+                            "
                         >
                             <NuxtLink :to="`/profile`">Profile</NuxtLink>
                         </button>

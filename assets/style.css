@@ -598,3 +598,6 @@ hr {
     width: 6px;
     background: #00cd74;
 }
+.fix{
+display: block;
+}
