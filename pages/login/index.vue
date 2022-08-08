@@ -3,7 +3,7 @@
         <div class="login-container">
             <h1 class="heading">Log In</h1>
             <p>
-                Don't have an account 
+                Don't have an account?
                 <nuxt-link class="container-line" :to="`/register`"
                     ><strong>Sign Up Now</strong></nuxt-link
                 >
@@ -27,9 +27,6 @@
 
                 <button @click="handleLogin" class="btn">Login</button>
                 <br />
-                <button class="btn">
-                    <nuxt-link :to="`/register`">Sign up now</nuxt-link>
-                </button>
             </form>
         </div>
         <div class="login-image">
