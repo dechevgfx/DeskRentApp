@@ -74,6 +74,7 @@
                                 >Details</NuxtLink
                             >
                         </button>
+                        <br>
                         <button
                             @click="freeDesk"
                             v-if="
