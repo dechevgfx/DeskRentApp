@@ -50,6 +50,20 @@
                             Rent
                         </button>
                         <button
+                            @click="freeDesk"
+                            v-if="
+                                currentUser.role === 'RoomManager' &&
+                                desk.roomId == currentUser.roomsManaged &&
+                                desk.isTaken
+                            "
+                            class="btn yellow"
+                        >
+                            <NuxtLink :to="`desks`" v-if="showLink"
+                                >Release</NuxtLink
+                            >
+                        </button>
+                        <br>
+                        <button
                             v-if="
                                 desk.rentedBy === currentUser.email &&
                                 currentUser.role !== 'admin' &&
@@ -61,7 +75,6 @@
                                 >Details</NuxtLink
                             >
                         </button>
-                        <br />
                         <button
                             v-if="
                                 currentUser.role === 'admin' ||
@@ -75,19 +88,6 @@
                             >
                         </button>
                         <br>
-                        <button
-                            @click="freeDesk"
-                            v-if="
-                                currentUser.role === 'RoomManager' &&
-                                desk.roomId == currentUser.roomsManaged &&
-                                desk.isTaken
-                            "
-                            class="btn yellow"
-                        >
-                            <NuxtLink :to="`desks`" v-if="showLink"
-                                >Release</NuxtLink
-                            >
-                        </button>
                     </div>
                 </div>
             </div>
