@@ -71,7 +71,7 @@ export default {
         };
     },
     created(){
-        setTimeout(()=>(this.visible = false), 10000)
+        setTimeout(()=>(this.visible = false), 5000)
     },
     methods: {
         click(e) {
