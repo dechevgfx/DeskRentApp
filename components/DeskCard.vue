@@ -1,7 +1,10 @@
 <template>
     <div>
         <br />
-        <h5 class="centre container-line" v-if="desk.rentedBy === currentUser.email">
+        <h5
+            class="centre container-line"
+            v-if="desk.rentedBy === currentUser.email"
+        >
             RENTED BY YOU!
         </h5>
         <h5 class="centre container-line" v-else>
@@ -54,7 +57,9 @@
                                 (currentUser.role === 'RoomManager' &&
                                     desk.roomId == currentUser.roomsManaged &&
                                     desk.isTaken) ||
-                                (currentUser.role === 'admin' && desk.isTaken)
+                                (currentUser.role === 'admin' &&
+                                    desk.isTaken &&
+                                    desk.rentedBy !== 'admin')
                             "
                             class="btn yellow"
                         >
@@ -62,20 +67,6 @@
                                 >Release</NuxtLink
                             >
                         </button>
-                        <button
-                            v-if="
-                                (desk.rentedBy === currentUser.email &&
-                                    currentUser.role == 'client') ||
-                                (desk.rentedBy === currentUser.email &&
-                                    currentUser.roomsManaged[0] !== desk.roomId)
-                            "
-                            class="btn"
-                        >
-                            <NuxtLink :to="`desks/${desk._id}`"
-                                >Details</NuxtLink
-                            >
-                        </button>
-                        <br />
                         <button
                             class="btn"
                             v-if="
@@ -87,11 +78,14 @@
                         >
                             <NuxtLink :to="`/profile`">Profile</NuxtLink>
                         </button>
+                        <br />
                         <button
                             v-if="
                                 currentUser.role === 'admin' ||
                                 (currentUser.role === 'RoomManager' &&
-                                    desk.roomId == currentUser.roomsManaged)
+                                    desk.roomId == currentUser.roomsManaged) ||
+                                (desk.rentedBy === currentUser.email &&
+                                    currentUser.role == 'client')
                             "
                             class="btn"
                         >

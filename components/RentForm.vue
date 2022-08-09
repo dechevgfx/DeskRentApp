@@ -8,7 +8,7 @@
                     <h2 class="container-line">RENT YOU'R SPACE</h2>
                     <br />
                     <div class="box">
-                        <p>{{ desk.roomName }}</p>
+                        <p>{{ room[desk.roomId - 1].name }}</p>
                     </div>
                     <br />
                     <div class="box">
@@ -47,7 +47,7 @@
         </div>
         <div v-else>
         <br><br>
-            <div class="rent-complete">
+            <div v-show="visible" class="rent-complete">
                 <button class="btn space-above">
                     <NuxtLink :to="`desks/${desk._id}`">DESK DETAILS</NuxtLink>
                 </button>
@@ -67,7 +67,11 @@ export default {
         return {
             selectedDuration: "",
             deskRented: false,
+            visible: true
         };
+    },
+    created(){
+        setTimeout(()=>(this.visible = false), 10000)
     },
     methods: {
         click(e) {
@@ -92,7 +96,6 @@ export default {
             return this.$store.state.desks.selectedDeskToRent;
         },
         deskID() {
-            console.log(this.desk);
             return this.desk._id;
         },
         room() {
