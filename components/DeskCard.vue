@@ -14,6 +14,20 @@
             }}</span>
         </h5>
         <br />
+        <div class="centre">
+            <button
+                v-if="
+                    currentUser.role === 'RoomManager' &&
+                    desk.roomId == currentUser.roomsManaged
+                "
+                @click="deleteDesk"
+                class="btn red"
+            >
+                Remove Desk
+            </button>
+        </div>
+
+        <br />
         <div class="box">
             <img v-if="desk.roomId === 1" src="@/assets/img/p1.jpg" alt="" />
             <img v-if="desk.roomId === 2" src="@/assets/img/p2.jpg" alt="" />
@@ -109,6 +123,23 @@ export default {
         };
     },
     methods: {
+        deleteDesk() {
+            if (this.desk.isTaken) {
+                this.$store.commit("removeRentedDesk", [
+                    this.desk._id,
+                    this.desk.rentedBy,
+                ]);
+                this.$store.commit("rooms/freeDesk", [
+                    this.desk.roomId,
+                    this.desk._id,
+                ]);
+            }
+            this.$store.commit("rooms/remove", [
+                this.desk.roomId,
+                this.desk._id,
+            ]);
+            this.$store.commit("desks/remove", this.desk._id);
+        },
         freeDesk() {
             this.$store.commit("removeRentedDesk", [
                 this.desk._id,
